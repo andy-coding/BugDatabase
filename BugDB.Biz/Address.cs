@@ -32,7 +32,7 @@ namespace BugDB.BL
         #endregion
 
         #region props
-        private static int Count { get; set; } = 0;
+        public static int Count { get; set; } = 0;
 
 
         public int Id { get; set; }
@@ -45,12 +45,12 @@ namespace BugDB.BL
             set { city = value; }
         }
 
-        public enum addressType{
+        public enum AddressType{
             Delivery,
             Billing
         }
 
-        public addressType Type { get; set; }
+        public AddressType Type { get; set; }
 
 
 

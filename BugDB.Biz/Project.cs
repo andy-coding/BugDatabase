@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Client.Common;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace BugDB.BL
 {
@@ -14,10 +15,10 @@ namespace BugDB.BL
        {
             #region ctors
 
-        public Project() : this(0, "", format.unknown)
+        public Project() : this(0, "", Format.unknown)
         { }
 
-        public Project( int clientId, string title, format format )
+        public Project( int clientId, string title, Format format )
         {
             this.Title = title;
             this.ClientId = clientId;
@@ -28,17 +29,18 @@ namespace BugDB.BL
 
 
         #region props
-        public enum format
+        public enum Format
         {
             DVD,
             BD,
             unknown
         };
 
-        public static int Id { get; set; } = 0;
+        [Key]
+        public int Id { get; set; }
         public string Title { get; set; }
         public int ClientId { get; set; }
-        public format ProjectFormat { get; set; }
+        public Format ProjectFormat { get; set; }
         #endregion
 
         #region methods
@@ -58,7 +60,11 @@ namespace BugDB.BL
 
         string ILoggable.Log()
         {
-            throw new NotImplementedException();
+            var logString = "ProjectID: " + this.Id
+                + "ClientID: " + this.ClientId
+                + "" + this.ProjectFormat ;
+
+                return logString;
         }
 
         #endregion

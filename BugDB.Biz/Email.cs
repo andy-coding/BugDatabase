@@ -21,7 +21,7 @@ namespace BugDB.BL
         #region props
         public static int Count { get; private set; } = 0;
 
-        public int Id { get; private set; }
+        public int Id { get; set; }
 
         private string address;
 

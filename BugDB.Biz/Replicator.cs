@@ -26,11 +26,7 @@ namespace BugDB.BL
         #region props
         private int id;
 
-        public int Id
-        {
-            get { return id; }
-            private set { id = value; }
-        }
+        public int Id { get; set; }
 
         private string name;
 

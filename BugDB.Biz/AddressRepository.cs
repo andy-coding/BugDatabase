@@ -33,12 +33,12 @@ namespace BugDB.BL
                 Address address1 = new Address()
                 {
                     City = "Bognor",
-                    Type = Address.addressType.Billing
+                    Type = Address.AddressType.Billing
                 };
             Address address2 = new Address()
             {
                 City = "Arbroath",
-                Type = Address.addressType.Delivery
+                Type = Address.AddressType.Delivery
                 };
                 AddressList.Add(address1);
                 AddressList.Add(address2);

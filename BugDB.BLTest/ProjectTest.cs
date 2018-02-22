@@ -46,7 +46,7 @@ namespace BugDB.BLTest
             {
                 Title = "UnitTests are Go",
                 ClientId = 1000,
-                ProjectFormat = Project.format.BD
+                ProjectFormat = Project.Format.BD
             };
 
             //act

@@ -40,7 +40,7 @@ namespace BugDB.BL
 
         public static int Count { get; set; } = 0;
 
-        public int Id { get; private set; }
+        public int Id { get; set; }
 
         private string name;
 

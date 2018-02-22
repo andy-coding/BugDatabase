@@ -24,7 +24,7 @@ namespace BugDB.BL
                 {
                     Title = "UnitTests are Go",
                     ClientId = 1000,
-                    ProjectFormat = Project.format.BD
+                    ProjectFormat = Project.Format.BD
                 };
                 returnproj = project1;
             }
@@ -44,13 +44,13 @@ namespace BugDB.BL
                 {
                     Title = "project1",
                     ClientId = 1,
-                    ProjectFormat = Project.format.BD
+                    ProjectFormat = Project.Format.BD
                 };
                 var proj2 = new Project()
                 {
                     Title = "project2",
                     ClientId = 2,
-                    ProjectFormat = Project.format.DVD
+                    ProjectFormat = Project.Format.DVD
                 };
 
                 projectList.Add(proj1);

@@ -39,11 +39,24 @@ namespace BugDB.BL
             return client;
         }
 
-        public bool Save()
+        public bool Save(Client client)
         {
             //  code is to be added here
 
-            return true;
+            var success = false;
+            
+            if (client.IsNew)
+            {
+                // run add_stored_procedure
+                success = true;
+            }
+            if (client.HasChanges)
+            {
+                //run edit_stored_procedure
+                success = true;
+            }
+
+            return success;
         }
         #endregion
     }
