@@ -15,16 +15,12 @@ namespace BugDB.Data.Test
         public void ClientSaveTest()
         {
             //arrange
-            var expected = new Client();
-            expected.Id = 0;
-            expected.Name = "Bob";
+            var expected = new Client { ContactName = "Fred", Name = "FredCo" };
 
             //act
             var clientRepo = new ClientRepository();
             var actual = new Client { Id = 0, Name = "Bob" };
-            clientRepo.Save(actual);
-            Console.WriteLine(actual.Id);
-            Console.WriteLine(actual.Name);
+
 
             //assert
             Assert.AreEqual(expected.Id, actual.Id);

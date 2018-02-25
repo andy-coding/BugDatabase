@@ -20,7 +20,7 @@ namespace Client.Common.Test
             var logs = new List<ILoggable>();
 
             var newproj = new Project(1, "project1", Project.Format.DVD);
-            var newclient = new BugDB.BL.Client(2, "newclient");
+            var newclient = new BugDB.BL.Client("newclient");
 
             logs.Add(newproj as ILoggable);
             logs.Add(newclient as ILoggable);

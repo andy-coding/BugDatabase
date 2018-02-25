@@ -8,7 +8,7 @@ namespace BugDB.BL
 {
     public abstract class EntityBase
     {
-        public bool IsNew { get; private set; }
+        public bool IsNew { get;  set; }
 
         public bool HasChanges { get; private set; }
 

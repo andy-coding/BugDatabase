@@ -45,7 +45,7 @@ namespace BugDB.BL
             //  code is to be added here
 
             var success = false;
-            
+
             if (client.IsNew)
             {
                 using (var context = new BugDBContext())

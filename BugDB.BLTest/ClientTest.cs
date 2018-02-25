@@ -7,20 +7,20 @@ namespace BugDB.BLTest
     [TestClass]
     public class ClientTest
     {
-        [TestMethod]
-        public void ClientCountTest()
-        {
-            //Arrange
-            Client.Count = 0;
-            var c1 = new Client();
-            var c2 = new Client();
-            var expected = 2;
+        //[TestMethod]
+        //public void ClientCountTest()
+        //{
+        //    //Arrange
+        //    Client.Count = 0;
+        //    var c1 = new Client();
+        //    var c2 = new Client();
+        //    var expected = 2;
 
-            //Act
+        //    //Act
 
-            //Assert
-            Assert.AreEqual(expected, Client.Count);
-        }
+        //    //Assert
+        //    Assert.AreEqual(expected, Client.Count);
+        //}
 
         [TestMethod]
         public void ValidateValid()

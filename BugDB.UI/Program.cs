@@ -14,7 +14,7 @@ namespace BugDatabase
         {
             //Console.WriteLine("Lineadded here for home3");
             var clientRepo = new ClientRepository();
-            var client = new Client { Id = 0, Name = "Bob" };
+            var client = new Client { ContactName = "Dave", Name = "DaveCo" };
             clientRepo.Save(client);
         }
     }

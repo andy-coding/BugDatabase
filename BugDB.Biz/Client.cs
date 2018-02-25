@@ -14,22 +14,28 @@ namespace BugDB.BL
         /// defines clients who will provide projects
         /// </summary>
         /// 
-
-
-        #region contructors
-        public Client(): this (0, "")
+         #region contructors
+  
+        public Client(): this ("")
         {
         }
 
-        public Client(int id) : this (id, "")
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        public Client(int id) : this ("")
         {
         }
 
-        public Client(int id, string name)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        public Client(string name)
         {
-            Count++;
-            this.Id = Count;
-            this.Name = name;
+            IsNew = true;
+            this.name = name;
             AddressList = new List<Address>();
 
         }
@@ -38,7 +44,6 @@ namespace BugDB.BL
 
         #region props
 
-        public static int Count { get; set; } = 0;
 
         public int Id { get; set; }
 
