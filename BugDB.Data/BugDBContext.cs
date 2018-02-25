@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BugDB.Data
 {
+
     public class BugDBContext : DbContext
     {
         public DbSet<Client> TblClient { get; set; }
@@ -15,6 +16,8 @@ namespace BugDB.Data
         {
             optionsBuilder.UseSqlServer(
                 "Server = (localdb)\\mssqllocaldb; Database = BugDB; Trusted_Connection = True; ");
+
         }
+
     }
 }

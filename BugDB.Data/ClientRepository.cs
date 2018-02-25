@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BugDB.Data;
 
 namespace BugDB.BL
 {
@@ -47,8 +48,13 @@ namespace BugDB.BL
             
             if (client.IsNew)
             {
-                // run add_stored_procedure
-                success = true;
+                using (var context = new BugDBContext())
+                {
+                    context.TblClient.Add(client);
+                    context.SaveChanges();
+                }
+
+                    success = true;
             }
             if (client.HasChanges)
             {

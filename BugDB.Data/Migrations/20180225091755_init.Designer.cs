@@ -12,7 +12,7 @@ using System;
 namespace BugDB.Data.Migrations
 {
     [DbContext(typeof(BugDBContext))]
-    [Migration("20180217135742_init")]
+    [Migration("20180225091755_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

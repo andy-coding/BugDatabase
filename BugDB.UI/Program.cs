@@ -1,8 +1,10 @@
-﻿using System;
+﻿using BugDB.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BugDB.BL;
 
 namespace BugDatabase
 {
@@ -10,6 +12,10 @@ namespace BugDatabase
     {
         static void Main(string[] args)
         {
+            //Console.WriteLine("Lineadded here for home3");
+            var clientRepo = new ClientRepository();
+            var client = new Client { Id = 0, Name = "Bob" };
+            clientRepo.Save(client);
         }
     }
 }

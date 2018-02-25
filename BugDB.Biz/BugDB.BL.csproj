@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="AddressRepository.cs" />
-    <Compile Include="ClientRepository.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="Project.cs" />

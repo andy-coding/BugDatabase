@@ -65,6 +65,9 @@
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Console, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Console.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Console.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Options, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Options.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
     </Reference>
@@ -173,9 +176,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BugDBContext.cs" />
-    <Compile Include="Migrations\20180217135742_init.cs" />
-    <Compile Include="Migrations\20180217135742_init.designer.cs">
-      <DependentUpon>20180217135742_init.cs</DependentUpon>
+    <Compile Include="ClientRepository.cs" />
+    <Compile Include="Migrations\20180225091755_init.cs" />
+    <Compile Include="Migrations\20180225091755_init.designer.cs">
+      <DependentUpon>20180225091755_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\BugDBContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,13 +189,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\BugDB.Biz\BugDB.BL.csproj">
       <Project>{c3543ea4-0575-417b-ba71-ea2ddd196071}</Project>
       <Name>BugDB.BL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

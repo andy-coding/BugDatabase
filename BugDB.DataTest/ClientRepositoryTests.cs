@@ -6,8 +6,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BugDB.BLTest
+namespace BugDB.Data.Test
 {
+    [TestClass()]
+    public class ClientRepositoryTests
+    {
+        [TestMethod()]
+        public void ClientSaveTest()
+        {
+            //arrange
+            var expected = new Client();
+            expected.Id = 0;
+            expected.Name = "Bob";
+
+            //act
+            var clientRepo = new ClientRepository();
+            var actual = new Client { Id = 0, Name = "Bob" };
+            clientRepo.Save(actual);
+            Console.WriteLine(actual.Id);
+            Console.WriteLine(actual.Name);
+
+            //assert
+            Assert.AreEqual(expected.Id, actual.Id);
+            Assert.AreEqual(expected.Name, actual.Name);
+        }
+    }
+
     [TestClass()]
     public class ClientRepositoryTest
     {
