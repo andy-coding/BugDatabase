@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BugDB.Data;
 using BugDB.BL;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;

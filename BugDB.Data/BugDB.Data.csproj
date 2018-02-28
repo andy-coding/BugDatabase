@@ -175,6 +175,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressRepository.cs" />
     <Compile Include="BugDBContext.cs" />
     <Compile Include="ClientRepository.cs" />
     <Compile Include="Migrations\20180225091755_init.cs" />
@@ -182,7 +183,9 @@
       <DependentUpon>20180225091755_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\BugDBContextModelSnapshot.cs" />
+    <Compile Include="ProjectRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplicatorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

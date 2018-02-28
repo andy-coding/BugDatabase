@@ -16,7 +16,16 @@ namespace BugDB.Data
         {
             optionsBuilder.UseSqlServer(
                 "Server = (localdb)\\mssqllocaldb; Database = BugDB; Trusted_Connection = True; ");
+            
+        }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                modelBuilder.Entity<Client>().Ignore(t => t.IsNew);
+            }
         }
 
     }

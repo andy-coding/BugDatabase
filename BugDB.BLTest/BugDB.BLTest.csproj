@@ -62,6 +62,10 @@
       <Project>{c3543ea4-0575-417b-ba71-ea2ddd196071}</Project>
       <Name>BugDB.BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BugDB.Data\BugDB.Data.csproj">
+      <Project>{36681e31-4212-42cd-a8f8-8a5b8f53648f}</Project>
+      <Name>BugDB.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
